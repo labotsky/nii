@@ -1,0 +1,10 @@
+<ul>
+  <% menus.each do |submenu| %>
+      <%= content_tag :li, class: ("has-sub" if submenu.has_children?) do %>
+          <%= link_to submenu do %>
+              <%= content_tag :span, submenu.name %>
+          <% end %>
+          <%= render 'submenus', menus: submenu.children if submenu.has_children? %>
+      <% end %>
+  <% end %>
+</ul>

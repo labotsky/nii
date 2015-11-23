@@ -19,11 +19,9 @@
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/bundle" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="RVM: ruby-2.1.2" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.7.9, RVM: ruby-2.2.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rake (v10.4.2, RVM: ruby-2.2.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rdoc (v4.2.0, RVM: ruby-2.2.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.6.2, RVM: ruby-2.1.2) [gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />

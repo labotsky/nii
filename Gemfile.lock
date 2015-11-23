@@ -40,6 +40,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    ancestry (2.1.0)
+      activerecord (>= 3.0.0)
     arbre (1.0.3)
       activesupport (>= 3.0.0)
     arel (5.0.1.20140414130214)
@@ -164,6 +166,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin (~> 1.0.0.pre1)
+  ancestry
   coffee-rails (~> 4.0.0)
   devise
   jbuilder (~> 2.0)

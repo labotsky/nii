@@ -1,7 +1,6 @@
 .jcarousel-wrapper {
     position: relative;
-    width: 786px;
-    left: 94px;
+    width: 100%;
     -webkit-box-shadow: 0 0 2px #999;
        -moz-box-shadow: 0 0 2px #999;
             box-shadow: 0 0 2px #999;
@@ -27,8 +26,8 @@
 .jcarousel {
     position: relative;
     overflow: hidden;
-    width: 600px;
-    height: 350px;
+    width: 980px;
+    height: 300px;
 }
 
 .jcarousel ul {
