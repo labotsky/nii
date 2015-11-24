@@ -1,6 +1,6 @@
 <ul>
   <li><a href='#'><span>Home</span></a></li>
-  <% Menu.roots.each do |menu| %>
+  <% Menu.header.roots.each do |menu| %>
       <% menu_wrapper(@menu.try(:root)==menu, menu.has_children?) do %>
           <%= link_to menu do %>
               <%= content_tag :span, menu.name %>
