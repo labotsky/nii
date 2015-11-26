@@ -1,6 +1,3 @@
-// Place all the styles related to the static_pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 * {
 	margin:0;
 	padding:0;
@@ -11,8 +8,8 @@ body {
 	font:14px Arial,Helvetica,sans-serif;
 	color:#333;
 	height: 100%;
-	margin-top:20px;
-	background:url(body-bg.png) repeat scroll center 0px transparent;
+	margin:20px;
+	background: image-url("body-bg.png") repeat scroll center 0px transparent;
 }
 a {
 	color:#ff0000;
@@ -20,6 +17,7 @@ a {
 	cursor:pointer;
 }
 a:hover {
+    color: #fff;
 	text-decoration:underline;
 }
 a img {
@@ -54,8 +52,13 @@ textarea {
 	display:inline;
 }
 .shell {
-	width:980px;
+	min-width:1024px;
+    max-width:1200px;
 	margin:0 auto;
+}
+.shell-editor {
+  width:400px;
+  margin:0 auto;
 }
 .border {
 	border:1px solid #e8e8e8;
@@ -63,7 +66,7 @@ textarea {
 	position:relative;
 }
 .shadow-l {
-	background:url(shadow-l.png) no-repeat 0 0;
+	background:image-url("shadow-l.png") no-repeat 0 0;
 	width:25px;
 	height:686px;
 	position:absolute;
@@ -71,7 +74,7 @@ textarea {
 	left:-25px;
 }
 .shadow-r {
-	background:url(shadow-r.png) no-repeat 0 0;
+	background:image-url("shadow-r.png") no-repeat 0 0;
 	width:25px;
 	height:686px;
 	position:absolute;
@@ -79,7 +82,7 @@ textarea {
 	right:-25px;
 }
 .shadow-b {
-	background:url(shadow-b.png) no-repeat 0 0;
+	background:image-url("shadow-b.png") no-repeat 0 0;
 	width:980px;
 	height:20px;
 	position:absolute;
@@ -93,7 +96,7 @@ textarea {
 	position:relative;
 }
 #logo a {
-	background:url(logo.gif) no-repeat 0 0;
+	background:image-url("logo.gif") no-repeat 0 0;
 	width:356px;
 	height:109px;
 	position:absolute;
@@ -183,8 +186,7 @@ textarea {
 	background:#39393d;
 }
 #main {
-	width:932px;
-	padding:37px 24px 17px 24px;
+	padding:25px 5px 5px;
 }
 #main h3 {
 	font-size:12px;
@@ -194,19 +196,19 @@ textarea {
 	border-bottom:1px solid #dbdbdb;
 	padding:0 0 9px 0;
 }
-#main a.more {
-	background:url(more.gif) no-repeat 0 3px;
-	font-size:11px;
-	line-height:14px;
-	color:#ff0000;
-	text-decoration:underline;
-	padding:0 0 0 13px;
-}
+
 #main a.more:hover {
 	text-decoration:none;
 }
-#content {
-	width:605px;
+#content p{
+  text-align: justify;
+  font-size: 14px;
+}
+#content h1{
+  margin-bottom: 20px;
+}
+#content h3{
+  color:#000 !important;
 }
 .highlight h3 {
 	margin:0 0 9px 0;
@@ -245,12 +247,14 @@ textarea {
 }
 
 #sidebar h3{
+  text-transform: none;
   width: auto;
   color: #fff;
   font-weight: bold !important;
   padding:5px;
   margin-bottom: 5px;
-  font:14px Arial,Helvetica,sans-serif;
+  text-shadow: 1px 1px 2px #000;
+  font:12px Arial,Helvetica,sans-serif;
   box-shadow: 1px 1px 2px #0F7AAF;
   background: #39b1cc;
   background: -moz-linear-gradient(top, #51bbd2 0%, #2d97af 100%);
@@ -261,15 +265,24 @@ textarea {
   background: linear-gradient(to bottom, #51bbd2 0%, #2d97af 100%);
 }
 
-#sidebar {
-	width:300px;
-}
 .sidebar-nav {
 	list-style:none;
 	padding:0 0 17px 0;
 }
+.sidebar-nav div{
+  margin:5px;
+}
+
+.sidebar-nav p{
+  margin:5px;
+  padding:0;
+  font-size: 13px;
+  font-weight: bold;
+}
+
 .sidebar-nav ul {
 	list-style:none;
+    margin-left: 0px;
 }
 .sidebar-nav ul li {
     transition: background-color 0.6s ease;
@@ -279,24 +292,36 @@ textarea {
 	padding:7px 0;
 }
 .sidebar-nav ul li a {
-	background:url(bullet.gif) no-repeat 5px 4px;
 	color:#333;
     display:block;
-	padding:0 0 0 16px;
+    margin:5px;
 }
 
 .sidebar-nav ul li:hover {
   border-bottom:1px solid #2d97af;
   font-size:12px;
   line-height:18px;
-  border-left:4px solid #0F7AAF;
-  background-color: #39b1cc;
   padding:7px 0;
+  background-color:rgba(45,151,175, 0.3);
 }
 
-.sidebar-nav ul li:hover a{
-  text-decoration: none;
-  color: #fff;
+.sidebar-nav ul li.active {
+  background-color: #39b1cc;
+  border-bottom:1px solid #2d97af;
+  font-size:12px;
+  line-height:18px;
+  padding:7px 0;
+  color: #fff !important;
+  font-weight: bold !important;
+  padding-left: 17px !important;
+}
+
+.sidebar-nav ul li.active:hover {
+  font-size:12px;
+  line-height:18px;
+  border-left:none !important;
+  padding:none !important;
+  cursor:pointer;
 }
 
 .advertisement {
@@ -327,18 +352,25 @@ textarea {
 }
 
 #logo_txt{
-	text-shadow:1px 1px 3px #000;
+	text-shadow:1px 1px 3px #000  !important;
 	position: absolute;
-	top:55px;
-	left: 25px;
+	top:46px;
+	left: 20px;
 }
 
-#header h2,h3{
-	color:#fff;
+#logo_txt h2,h3{
+    font-weight: bold;
+    text-transform: uppercase;
+	color:#fff !important;
 }
 
-#header h3{
-	letter-spacing:9.5px;
+#logo_txt h3{
+    font-size: 1.17em;
+	letter-spacing:10.2px !important;
+}
+
+#logo_txt h2{
+  font-size: 1.5em;
 }
 
 #locale{
@@ -346,6 +378,12 @@ textarea {
 	position:absolute;
 	right:10px;
 	top:10px;
+}
+
+#locale span a{
+  color:#fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #000;
 }
 
 #redline{
@@ -363,7 +401,7 @@ textarea {
 }
 
 #flag{
-	background:url(flag.png) no-repeat 0 0;
+	background:image-url("flag.png") no-repeat 0 0;
 	background-size: 30% 100%;
 	width: 100%;
 	height: 100%;
@@ -372,75 +410,17 @@ textarea {
 	left:0;
 }
 
-.button{text-decoration:none; text-align:center; 
-	padding:3px 3px; 
-
-	
-	font:12px Arial, Helvetica, sans-serif; 
-	color:#E5FFFF; 
-	background-color:#fff; 
-	background-image: -moz-linear-gradient(top, #3ba4c7 0%, #1982a5 100%); 
-	background-image: -webkit-linear-gradient(top, #3ba4c7 0%, #1982a5 100%); 
-	background-image: -o-linear-gradient(top, #3ba4c7 0%, #1982a5 100%); 
-	background-image: -ms-linear-gradient(top, #3ba4c7 0% ,#1982a5 100%); 
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1982a5', endColorstr='#1982a5',GradientType=0 ); 
-	background-image: linear-gradient(top, #3ba4c7 0% ,#1982a5 100%);   
-	-webkit-box-shadow:1px 1px 2px #999696, inset 0px 0px 1px #ffffff; 
-	-moz-box-shadow: 1px 1px 2px #999696,  inset 0px 0px 1px #ffffff;  
-	box-shadow:1px 1px 2px #999696, inset 0px 0px 1px #ffffff;  
-	
-	-webkit-transition: all 0.12s linear;
-	-moz-transition:  all 0.12s linear;
-	-o-transition:  all 0.12s linear;
-	transition:  all 0.12s linear;
+#breadcrum{
+  margin-left:15px;
+  margin-top:10px;
 }
 
-.button:hover{
-	padding:3px 3px; 
-	border:solid 1px #004F72; 
-	font:12px Arial, Helvetica, sans-serif; 
-	color:#E5FFFF; 
-	background-color:#3ba4c7; 
-	background-image: -moz-linear-gradient(top, #3ba4c7 0%, #1982a5 100%); 
-	background-image: -webkit-linear-gradient(top, #3ba4c7 0%, #1982a5 100%); 
-	background-image: -o-linear-gradient(top, #3ba4c7 0%, #1982a5 100%); 
-	background-image: -ms-linear-gradient(top, #3ba4c7 0% ,#1982a5 100%); 
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1982a5', endColorstr='#1982a5',GradientType=0 ); 
-	background-image: linear-gradient(top, #3ba4c7 0% ,#1982a5 100%);   
-	-webkit-box-shadow:1px 1px 2px #999696, inset 0px 0px 1px #ffffff; 
-	-moz-box-shadow: 1px 1px 2px #999696,  inset 0px 0px 1px #ffffff;  
-	box-shadow:1px 1px 2px #999696, inset 0px 0px 1px #ffffff;  
-	
-}
-
-#search{
-	position: absolute;
-	bottom: 10px;
-	right: 10px;
-}
-
-input[type=search] {
-	background: #fff url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 6px center;
-	border: solid 1px #ccc;
-	padding: 5px 3px 3px 32px;
-	width: 130px;	
-	-webkit-transition: all .5s;
-	-moz-transition: all .5s;
-	transition: all .5s;
-}
-input[type=search]:focus {
-	width: 180px;
-	background-color: #fff;
-	border-color: #66CC75;	
-	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
-	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
-	box-shadow: 0 0 5px rgba(109,207,246,.5);
+#breadcrum a{
+  font-size: 12px;
+  text-transform: uppercase;
+  color:#2d97af;
+  font-weight: bold;
 }
 
 
-input:-moz-placeholder {
-	color: #999;
-}
-input::-webkit-input-placeholder {
-	color: #999;
-}
+

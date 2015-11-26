@@ -64,11 +64,11 @@ class MenusController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_menu
-      @menu = Menu.find(params[:id])
+      @menu = Menu.find_by_slug!(params[:id].split("/").last)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def menu_params
-      params.require(:menu).permit(:name, :parent_id, :state)
+      params.require(:menu).permit(:name, :parent_id)
     end
 end

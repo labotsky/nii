@@ -17,7 +17,7 @@ ActiveAdmin.register User do
   filter :created_at
   
   form do |f|
-    f.inputs "Moderators" do
+    f.inputs "Editor" do
       f.input :email
       f.input :password
       f.input :password_confirmation

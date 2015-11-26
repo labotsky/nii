@@ -28,6 +28,8 @@ gem 'spring',        group: :development
 gem 'devise'
 gem 'activeadmin', '~> 1.0.0.pre1'
 gem 'ancestry'
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'foundation-rails', '5.4.3.1'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

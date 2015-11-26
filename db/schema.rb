@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151124062553) do
+ActiveRecord::Schema.define(version: 20151126091400) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -51,10 +51,12 @@ ActiveRecord::Schema.define(version: 20151124062553) do
     t.string   "ancestry"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "state"
+    t.integer  "state"
+    t.string   "slug"
   end
 
   add_index "menus", ["ancestry"], name: "index_menus_on_ancestry"
+  add_index "menus", ["slug"], name: "index_menus_on_slug"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
