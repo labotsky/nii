@@ -1,14 +1,26 @@
-<div id="header">
-  <div id="flag"></div>
-  <div id="logo_txt">
-    <h2><%= t "niei" %></h2>
-    <h3><%= t "rb" %></h3>
+<header id="header">
+  <div id="headerInner">
+
+    <div class="logo">
+      <h1>Научно-исследовательский институт</h1>
+      <h1>Министерства экономики</h1>
+      <h1>Республики Беларусь</h1>
+    </div>
+
+    <div id="locale"/>
+        <%= link_to_unless_current "ENG", params.merge({locale: "en"}) %>
+        <%= link_to_unless_current "RU", params.merge({locale: "ru"}) %>
+        <%= link_to_unless_current "BEL", params.merge({locale: "be"}) %>
+    </div>
+
+    <nav class="topMenuRight">
+      <ul>
+        <% Menu.header.roots.each do |menu| %>
+            <%= content_tag :li, class: "page_item" do %>
+                <%= link_to menu.name, menu %>
+            <% end %>
+        <% end %>
+      </ul>
+    </nav>
   </div>
-  <div id="locale">
-    <span><%= link_to_unless_current "ENG", params.merge({locale: "en"}) %></span>
-    <span><%= link_to_unless_current "РУС", params.merge({locale: "ru"}) %></span>
-    <span><%= link_to_unless_current "БЕЛ", params.merge({locale: "be"}) %></span>
-  </div>
-</div>
-<div id="redline"></div>
-<div id="greenline"></div>
+</header>

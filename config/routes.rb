@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     ActiveAdmin.routes(self)
     devise_for :admin_users, ActiveAdmin::Devise.config
     resources :menus, path: "", only: [:show]
+    resources :news, only: [:show]
     devise_for :users, :skip => [:registrations, :password], :controllers => { :sessions => "sessions" }
     root 'static_pages#home'
   end
